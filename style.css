@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --body-bg-color: #dce4e3;
+    --green: #18c29c;
+    --light-green: #8ed7c6;
+      --light-grey: #dce4e3;
+    --text-color: #084236;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    background: var(--body-bg-color);
+}
+
+.cont-menu{
+    width: 250px;
+    height: 100vh;
+    background: var(--green);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: aumenta .6s ease-in-out;
+}
+
+#hamburguer-title-menu{
+    cursor: pointer;
+}
+
+#cont-title-menu{
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cont-menu ul li{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 13px;
+    margin: 20px auto;
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all .6s;
+}
+
+.cont-menu ul li:hover{
+    background: var(--light-green);
+}
+
+/* FOOTER  */
+.cont-preople-footer{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#cont-profile-menu{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: var(--light-green);
+}
+
+#img-profile-menu{
+    width: 45px;
+    object-fit: cover;
+    height: 45px;
+    border-radius: 12px;
+}
+
+#name-footer{
+    font-size: 15px;
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+#position-footer{
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    font-size: 12px;
+}
+
+#cont-profile-menu svg{
+    cursor: pointer;
+}
+
+/* Controle de Menu */
+
+.disabled_cont{
+    width: 78px;
+    height: 100vh;
+    animation: diminui .6s ease-in-out;
+}
+
+.disable{
+    display: none;
+}
+
+.align_icons_links{
+    justify-content: center;
+}
+
+@keyframes diminui {
+    0%{
+        width: 250px;
+    }
+    100%{
+        width: 78px;
+    }
+}
+
+@keyframes aumenta {
+    0%{
+        width: 78px;
+    }
+    100%{
+        width: 250px;
+    }
+}
